@@ -7305,19 +7305,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\طيبة\\.nuget\\packages\\": {}
+    "C:\\Users\\Ahmed Ismail\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI\\ASP.NET MVC Core\\Project\\Maktabty\\Maktabty\\Maktabty.csproj",
+      "projectUniqueName": "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj",
       "projectName": "Maktabty",
-      "projectPath": "D:\\ITI\\ASP.NET MVC Core\\Project\\Maktabty\\Maktabty\\Maktabty.csproj",
-      "packagesPath": "C:\\Users\\طيبة\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI\\ASP.NET MVC Core\\Project\\Maktabty\\Maktabty\\obj\\",
+      "projectPath": "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj",
+      "packagesPath": "C:\\Users\\Ahmed Ismail\\.nuget\\packages\\",
+      "outputPath": "F:\\Projects\\Maktabty\\Maktabty\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\طيبة\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ahmed Ismail\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
