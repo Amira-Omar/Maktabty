@@ -110,9 +110,7 @@ namespace Maktabty.Controllers
                 if (result == true)
                 {
                     ////cooki
-                    //List<Claim> customClaim = new List<Claim>();
-                    //customClaim.Add(new Claim("Color", "Red"));
-                    //customClaim.Add(new Claim("Age", "12"));
+                    
                     await signInManager.SignInAsync(appUser, loginUser.RememberMe);
                     //await signInManager.SignInAsync(appUser, loginUser.RememberMe);//id ,name,role
                     return RedirectToAction("Index", "Book");
