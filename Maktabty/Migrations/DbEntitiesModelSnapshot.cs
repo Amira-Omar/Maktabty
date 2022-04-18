@@ -132,6 +132,21 @@ namespace Maktabty.Migrations
                     b.ToTable("Authors");
                 });
 
+            modelBuilder.Entity("Maktabty.Models.AuthorBook", b =>
+                {
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookId", "AuthorId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("AuthorBooks");
+                });
+
             modelBuilder.Entity("Maktabty.Models.Book", b =>
                 {
                     b.Property<int>("Id")
@@ -386,6 +401,25 @@ namespace Maktabty.Migrations
                         .HasForeignKey("booksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Maktabty.Models.AuthorBook", b =>
+                {
+                    b.HasOne("Maktabty.Models.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Maktabty.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("Maktabty.Models.Book", b =>

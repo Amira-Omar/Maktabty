@@ -34,6 +34,7 @@ namespace Maktabty.Models
             builder.Entity<Downloads>().HasKey(a => new { a.BookId, a.UserId });
             builder.Entity<Fav>().HasKey(a => new { a.BookId, a.UserId });
             builder.Entity<Review>().HasKey(a => new { a.BookId, a.UserId });
+            builder.Entity<AuthorBook>().HasKey(a => new { a.BookId, a.AuthorId });
             base.OnModelCreating(builder);
         }
         public DbSet<Author> Authors { get; set; }
@@ -44,5 +45,6 @@ namespace Maktabty.Models
         public DbSet<Downloads> Downloads { get; set; }
         public DbSet<Fav> Favs { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<AuthorBook> AuthorBooks { get; set; }
     }
 }

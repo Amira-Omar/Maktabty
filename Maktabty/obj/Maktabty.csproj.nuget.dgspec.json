@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SD\\Projects\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj": {}
+    "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj": {}
   },
   "projects": {
-    "D:\\SD\\Projects\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj": {
+    "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SD\\Projects\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "projectUniqueName": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj",
         "projectName": "Maktabty",
-        "projectPath": "D:\\SD\\Projects\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj",
-        "packagesPath": "C:\\Users\\GAMING STORE\\.nuget\\packages\\",
-        "outputPath": "D:\\SD\\Projects\\MVC\\Maktabty\\Maktabty\\obj\\",
+        "projectPath": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "packagesPath": "C:\\Users\\طيبة\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GAMING STORE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\طيبة\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

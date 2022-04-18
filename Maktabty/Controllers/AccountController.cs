@@ -63,7 +63,7 @@ namespace Maktabty.Controllers
                     //ispressitant=true or not 
                     await signInManager.SignInAsync(userModel, false);
                     //authoniticat create cookie
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Book");
                 }
                 else
                 {
@@ -115,7 +115,7 @@ namespace Maktabty.Controllers
                     //customClaim.Add(new Claim("Age", "12"));
                     await signInManager.SignInAsync(appUser, loginUser.RememberMe);
                     //await signInManager.SignInAsync(appUser, loginUser.RememberMe);//id ,name,role
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Book");
                 }
             }
             ModelState.AddModelError("", "User name & password in correct");
@@ -159,7 +159,7 @@ namespace Maktabty.Controllers
                     await userManager.AddToRoleAsync(userModel, "Admin");
                     await signInManager.SignInAsync(userModel, false);
                     //authoniticat create cookie
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Book");
                 }
                 else
                 {
