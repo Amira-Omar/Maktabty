@@ -9,7 +9,21 @@
 
         <nav id="navbar" class="navbar">
           <ul>
+               <li>
+                   <div class="dropdown">
+                     <a class=" dropdown-toggle" type="button"
+                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                     Profile
+                  </a>
+                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                   <li><a class="dropdown-item" href="/profile/profile/a1">Profile</a></li>
+                  <li><a class="dropdown-item" href="/downloads/downloads/a1">Downloads</a></li>
+                  <li><a class="dropdown-item" href="/favlist/favlist/a1">Favorits</a></li>
+                </ul>
+            </li>
             <li><a class="nav-link scrollto active" href="/Book/Index">Home</a></li>
+           
+
           @* <li><a class="nav-link scrollto" href="#about">About</a></li>*@
                     @if (User.Identity.IsAuthenticated == false)
                     {

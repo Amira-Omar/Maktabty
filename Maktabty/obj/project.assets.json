@@ -7305,19 +7305,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\طيبة\\.nuget\\packages\\": {}
+    "C:\\Users\\GAMING STORE\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj",
+      "projectUniqueName": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj",
       "projectName": "Maktabty",
-      "projectPath": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj",
-      "packagesPath": "C:\\Users\\طيبة\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\obj\\",
+      "projectPath": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj",
+      "packagesPath": "C:\\Users\\GAMING STORE\\.nuget\\packages\\",
+      "outputPath": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\طيبة\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GAMING STORE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
