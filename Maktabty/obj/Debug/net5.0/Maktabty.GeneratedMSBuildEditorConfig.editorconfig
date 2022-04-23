@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Maktabty
+<<<<<<< HEAD
 build_property.ProjectDir = F:\Projects\Maktabty\Maktabty\
+=======
+build_property.ProjectDir = D:\SD\Projects\MVC ASP.NET\Maktabty\Maktabty\
+>>>>>>> 5d5db056a5c1ba4f1ad87a1e6a9ee43d439ba10f

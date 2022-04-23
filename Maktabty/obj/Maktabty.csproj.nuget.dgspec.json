@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmed Ismail\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj": {}
+  },
+  "projects": {
+    "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "projectName": "Maktabty",
+        "projectPath": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "packagesPath": "C:\\Users\\GAMING STORE\\.nuget\\packages\\",
+        "outputPath": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\GAMING STORE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 5d5db056a5c1ba4f1ad87a1e6a9ee43d439ba10f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
