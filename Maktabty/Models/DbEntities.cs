@@ -25,7 +25,7 @@ namespace Maktabty.Models
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=MaktabtyDb;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=MaktabtyDb;Integrated Security=True;MultipleActiveResultSets = True");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder builder)

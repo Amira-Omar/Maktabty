@@ -13,11 +13,11 @@ namespace Maktabty.Models
         public DateTime PublishDate { get; set; }
         public string Language { get; set; }
         public string Description { get; set; }
-        public int? Pages { get; set; }
-        public int? NumOfDownloads { get; set; }
+        public int Pages { get; set; }
+        public int NumOfDownloads { get; set; }
 
         [ForeignKey("Category")]
-        public int? CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
         
         public virtual ICollection<Author> authors { get; set; }

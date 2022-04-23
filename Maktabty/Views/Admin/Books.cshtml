@@ -1,0 +1,40 @@
+﻿@model List<Book>;
+@{
+    ViewData["Title"] = "Books";
+    Layout = "_DashboardLayout.cshtml";
+   
+}
+
+<div style="display: flex;
+  flex-direction: row-reverse">
+     <a class="btn btn-success" href="/admin/NewBook" role="button">Add Book</a>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Cover</th>
+      <th scope="col">Category</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+   @foreach(var item in Model){
+    <tr>
+      <th scope="col">@item.Name</th>
+      <th scope="col"><img src="/Images/@item.Image" alt="" style="width:100px;height:50px;"></th>
+      <th scope="col">@item.Category.Name</th>
+      <th scope="col"><a class="btn btn-success" asp-controller="Admin" asp-action="BookDetails" asp-route-id = "@item.Id">Details</a></th>
+      <th scope="col"><a class="btn btn-success" asp-controller="Admin" asp-action="EditBook" asp-route-id = "@item.Id" role="button">Edit</a></th>
+      <th scope="col">
+          <a class="btn btn-success" asp-controller = "Admin" asp-action="DeleteBook" asp-route-id="@item.Id">Delete</a>
+      </th>
+    </tr>
+   }
+  </tbody>
+</table>
+
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+ 
