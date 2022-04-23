@@ -41,7 +41,7 @@ namespace Maktabty
             services.AddScoped<IProfileRepo, ProfileRepo>();
             services.AddScoped<IFavListRepo, FavListRepo>();
         }
-        }
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
