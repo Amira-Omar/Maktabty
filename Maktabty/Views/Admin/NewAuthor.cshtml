@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Authors";
+    Layout = "_DashboardLayout.cshtml";
+    SelectList Authors = new SelectList(ViewBag.Authors, "Id", "Name");
+}
+@model Book
+<h1>New Author</h1>
+<form method="post" asp-action="SaveNewAuthor" asp-controller="Admin">
+    <div>
+         <label for="Name">Name</label>
+         <input asp-for="@Model.Name" class="form-control"/>
+         <span asp-validation-for="@Model.Name"></span>
+    </div>
+     <div>
+        <label for="Image">Image</label>
+        <input type="file" name="Image" accept="image/*" id="Image" value="@Model.Image"class="form-control"/>
+    </div>
+    <br/>
+    <input type="submit" value="Add" class="btn btn-success" />
+</form>
+<br/>
+<a href="/Admin/Authors" class="btn btn-success"> Back To List</a>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

@@ -1,5 +1,39 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Author>;
 @{
+    ViewData["Title"] = "Authors";
+    Layout = "_DashboardLayout.cshtml";
 }
+
+
+<div style="display: flex;
+  flex-direction: row-reverse">
+     <a class="btn btn-success" href="/admin/NewAuthor" role="button">Add Authors</a>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+   @foreach(var item in Model){
+    <tr>
+      <th scope="col">@item.Name</th>
+      <th scope="col"><img src="/Images/@item.Image" alt="" style="width:100px;height:50px;"></th>
+      <th scope="col"></th>
+      @*<th scope="col"><a class="btn btn-success" asp-controller="Admin" asp-action="BookDetails" asp-route-id = "@item.Id">Details</a></th>*@
+      @*<th scope="col"><a class="btn btn-success" asp-controller="Admin" asp-action="EditBook" asp-route-id = "@item.Id" role="button">Edit</a></th>*@
+      <th scope="col">
+          <a class="btn btn-success" asp-controller = "Admin" asp-action="DeleteAuthor" asp-route-id="@item.Id">Delete</a>
+      </th>
+    </tr>
+   }
+  </tbody>
+</table>
+
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

@@ -96,5 +96,69 @@ namespace Maktabty.Controllers
             
             return View("Categories",cats);
         }
+
+        [HttpGet]
+        public IActionResult NewCategory()
+        {
+            List<Category> Cats = adminRepository.getAllCategories();
+            ViewData["Cats"] = Cats;
+            return View("NewCategory", new Category());
+        }
+
+        [HttpPost]
+        public IActionResult SaveNewCategory(Category newCategory)
+        {
+            if (ModelState.IsValid)
+            {
+                adminRepository.insertCategory(newCategory);
+                return RedirectToAction("Category");
+            }
+            List<Category> category  = adminRepository.getAllCategories();
+            ViewData["category"] = category;
+            return View(newCategory);
+        }
+
+
+        public IActionResult Authors()
+        {
+            List<Author> authors = adminRepository.getAllAuthors();
+
+            return View("Authors", authors);
+        }
+
+        public IActionResult DeleteAuthor(int id)
+        {
+            int numOfDeletd = adminRepository.deleteAuthor(id);
+            return RedirectToAction("Authors");
+        }
+
+        [HttpGet]
+        public IActionResult NewAuthor()
+        {
+            List<Author> Authors = adminRepository.getAllAuthors();
+            ViewData["Authors"] = Authors;
+            return View("NewAuthor", new Author());
+        }
+
+        [HttpPost]
+        public IActionResult SaveNewAuthor(Author newAuthor)
+        {
+            if (ModelState.IsValid)
+            {
+                adminRepository.insertAuthor(newAuthor);
+                return RedirectToAction("Authors");
+            }
+            List<Author> authors = adminRepository.getAllAuthors();
+            ViewData["Authors"] = authors;
+            return View(newAuthor);
+        }
+
+        public IActionResult Users()
+        {
+            List<ApplicationUser> users = adminRepository.getAllUsers();
+
+            return View("Users", users);
+        }
+
     }
 }

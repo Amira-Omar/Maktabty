@@ -37,13 +37,10 @@ namespace Maktabty
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IAuthorRepository, AuthorRepository>();
-<<<<<<< HEAD
             services.AddScoped<IAdminRepository, AdminRepository>();
-=======
             services.AddScoped<IDownloadsRepo, DownloadsRepo>();
             services.AddScoped<IProfileRepo, ProfileRepo>();
             services.AddScoped<IFavListRepo, FavListRepo>();
->>>>>>> 5d5db056a5c1ba4f1ad87a1e6a9ee43d439ba10f
         }
         
 

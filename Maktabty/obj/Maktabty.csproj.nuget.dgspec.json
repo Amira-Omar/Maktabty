@@ -1,37 +1,24 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj": {}
+    "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj": {}
   },
   "projects": {
-    "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj": {
+    "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "projectUniqueName": "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj",
         "projectName": "Maktabty",
-        "projectPath": "F:\\Projects\\Maktabty\\Maktabty\\Maktabty.csproj",
-        "packagesPath": "C:\\Users\\Ahmed Ismail\\.nuget\\packages\\",
-        "outputPath": "F:\\Projects\\Maktabty\\Maktabty\\obj\\",
+        "projectPath": "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "packagesPath": "C:\\Users\\Wasfy\\.nuget\\packages\\",
+        "outputPath": "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Ahmed Ismail\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj": {}
-  },
-  "projects": {
-    "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj",
-        "projectName": "Maktabty",
-        "projectPath": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\Maktabty.csproj",
-        "packagesPath": "C:\\Users\\GAMING STORE\\.nuget\\packages\\",
-        "outputPath": "D:\\SD\\Projects\\MVC ASP.NET\\Maktabty\\Maktabty\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\GAMING STORE\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 5d5db056a5c1ba4f1ad87a1e6a9ee43d439ba10f
+          "C:\\Users\\Wasfy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
