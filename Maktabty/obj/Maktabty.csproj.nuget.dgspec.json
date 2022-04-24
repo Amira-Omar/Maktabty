@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj": {}
+    "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj": {}
   },
   "projects": {
-    "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj": {
+    "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "projectUniqueName": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj",
         "projectName": "Maktabty",
-        "projectPath": "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\Maktabty.csproj",
-        "packagesPath": "C:\\Users\\Wasfy\\.nuget\\packages\\",
-        "outputPath": "F:\\ITI_Course\\MVC\\Maktabty\\Maktabty\\obj\\",
+        "projectPath": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\Maktabty.csproj",
+        "packagesPath": "C:\\Users\\طيبة\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\طيبة\\Desktop\\Maktabty\\Maktabty\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Wasfy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\طيبة\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

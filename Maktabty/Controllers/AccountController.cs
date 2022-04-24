@@ -1,7 +1,9 @@
 ﻿using Maktabty.Models;
+using Maktabty.Repositories;
 using Maktabty.viewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -16,16 +18,17 @@ namespace Maktabty.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
-
-        public IHostingEnvironment HostEnvironment { get; }
+   
+        public IWebHostEnvironment HostEnvironment { get; }
 
         public AccountController
             (UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
-            IHostingEnvironment hostEnvironment)
+            IWebHostEnvironment hostEnvironment)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             HostEnvironment = hostEnvironment;
+
         }
         //Create Account
         [HttpGet]
@@ -181,7 +184,7 @@ namespace Maktabty.Controllers
             {
                 fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(registerVM.Image.FileName);
 
-                string mypath = @"D:\ITI\ASP.NET MVC Core\Project\Maktabty\Maktabty\wwwroot\Images\";
+                string mypath = @"C:/Users/طيبة/Desktop/Maktabty/Maktabty/wwwroot/Images/";
                 string uploadDir = Path.Combine(mypath);
 
                 string filePath = Path.Combine(uploadDir, fileName);
@@ -192,5 +195,6 @@ namespace Maktabty.Controllers
             }
             return fileName;
         }
+    
     }
 }

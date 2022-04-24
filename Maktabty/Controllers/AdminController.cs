@@ -111,7 +111,7 @@ namespace Maktabty.Controllers
             if (ModelState.IsValid)
             {
                 adminRepository.insertCategory(newCategory);
-                return RedirectToAction("Category");
+                return RedirectToAction("Categories");
             }
             List<Category> category  = adminRepository.getAllCategories();
             ViewData["category"] = category;

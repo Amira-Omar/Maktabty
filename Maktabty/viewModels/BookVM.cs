@@ -9,6 +9,7 @@ namespace Maktabty.viewModels
         public List<Category> Category { get; set; }
         public List<Author> Author { get; set; }
         public List<AuthorBook> AuthorBooks { get; set; }
+        public ApplicationUser applicationUser { get; set; }
 
     }
 }

@@ -172,10 +172,10 @@ namespace Maktabty.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("NumOfDownloads")
+                    b.Property<int>("NumOfDownloads")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Pages")
+                    b.Property<int>("Pages")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("PublishDate")

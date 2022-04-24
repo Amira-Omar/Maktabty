@@ -806,3 +806,16 @@ F:\ITI_Course\MVC\Maktabty\Maktabty\obj\Debug\net5.0\Maktabty.genruntimeconfig.c
 F:\ITI_Course\MVC\Maktabty\Maktabty\obj\Debug\net5.0\ref\Maktabty.dll
 F:\ITI_Course\MVC\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\NewAuthor.cshtml.g.cs
 F:\ITI_Course\MVC\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\NewCategory.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\Authors.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\BookDetails.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\Books.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\Categories.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\EditBook.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\NewAuthor.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\NewBook.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\NewCategory.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\Users.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\_DashboardLayout.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Downloads\Downloads.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\FavList\FavList.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Profile\UserData.cshtml.g.cs
