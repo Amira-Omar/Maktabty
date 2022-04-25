@@ -819,3 +819,4 @@ C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Admin\_
 C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Downloads\Downloads.cshtml.g.cs
 C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\FavList\FavList.cshtml.g.cs
 C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Profile\UserData.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Reviews\Index.cshtml.g.cs

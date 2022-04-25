@@ -13,7 +13,7 @@
   <thead>
     <tr>
       <th scope="col">Name</th>
-      <th scope="col">Image</th>
+      <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
@@ -24,7 +24,6 @@
    @foreach(var item in Model){
     <tr>
       <th scope="col">@item.Name</th>
-      <th scope="col"><img src="/Images/@item.Image" alt="" style="width:100px;height:50px;"></th>
       <th scope="col"></th>
       @*<th scope="col"><a class="btn btn-success" asp-controller="Admin" asp-action="BookDetails" asp-route-id = "@item.Id">Details</a></th>*@
       @*<th scope="col"><a class="btn btn-success" asp-controller="Admin" asp-action="EditBook" asp-route-id = "@item.Id" role="button">Edit</a></th>*@

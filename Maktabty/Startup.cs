@@ -41,6 +41,7 @@ namespace Maktabty
             services.AddScoped<IDownloadsRepo, DownloadsRepo>();
             services.AddScoped<IProfileRepo, ProfileRepo>();
             services.AddScoped<IFavListRepo, FavListRepo>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
         }
         
 

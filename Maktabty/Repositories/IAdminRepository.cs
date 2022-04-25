@@ -1,4 +1,5 @@
 ﻿using Maktabty.Models;
+using Maktabty.viewModels;
 using System.Collections.Generic;
 
 namespace Maktabty.Repositories
@@ -10,7 +11,7 @@ namespace Maktabty.Repositories
         Book getBookById(int id);
         List<Book> getBooksByCategoryId(int categId);
         int insertBook(Book book);
-        int updateBook(int id, Book book);
+        int updateBook(int id, addBookVM book);
         int deleteAuthor(int id);
         List<Author> getAllAuthors();
         Author getAuthorById(int id);

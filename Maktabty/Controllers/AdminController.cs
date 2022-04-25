@@ -1,12 +1,15 @@
 ﻿using Maktabty.Models;
 using Maktabty.Repositories;
 using Maktabty.viewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Maktabty.Controllers
 {
+    [Authorize(Roles ="admin")]
     public class AdminController : Controller
     {
        
@@ -43,15 +46,30 @@ namespace Maktabty.Controllers
             ViewData["Cats"] = Cats;
             List<Author> Authors = adminRepository.getAllAuthors();
             ViewData["Authors"] = Authors;
-            return View("NewBook",new Book());
+            return View("NewBook",new addBookVM());
         }
 
         [HttpPost]
-        public IActionResult SaveNewBook(Book newBook)
+        public IActionResult SaveNewBook(addBookVM newBook)
         {
             if(ModelState.IsValid)
             {
-                adminRepository.insertBook(newBook);
+                string stringImageName = uploadImageFile(newBook);
+                string stringFileName = uploadFile(newBook);
+                Book book = new Book
+                {
+                    Name = newBook.Name,
+                    PublishDate=newBook.PublishDate,
+                    Language=newBook.Language,
+                    Description=newBook.Description,
+                    Pages=newBook.Pages,
+                    IsFeatured=false,
+                    NumOfDownloads=0,
+                    CategoryId=newBook.CategoryId,
+                    Image= stringImageName,
+                    book=stringFileName
+                };
+                adminRepository.insertBook(book);
                 return RedirectToAction("Books");
             }
             List<Book> books = adminRepository.getAllBooks();
@@ -63,20 +81,31 @@ namespace Maktabty.Controllers
         public IActionResult EditBook(int id)
         {
             Book bookSample = adminRepository.getBookById(id);
+            addBookVM bookvm = new addBookVM()
+            {
+                Id= bookSample.Id,
+                Name=bookSample.Name,
+                PublishDate=bookSample.PublishDate, 
+                Language=bookSample.Language,   
+                Description=bookSample.Description,
+                Pages=bookSample.Pages,
+                IsFeatured =false,
+                NumOfDownloads=0,
+                CategoryId=bookSample.CategoryId,
+            };
             List<Category> Cats = adminRepository.getAllCategories();
             ViewData["Cats"] = Cats;
             List<Author> Authors = adminRepository.getAllAuthors();
             ViewData["Authors"] = Authors;
-            return View("EditBook", bookSample);
+            return View("EditBook", bookvm);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult SaveEditBook(int id, Book bookView)
+        public IActionResult SaveEditBook(int id, addBookVM bookView)
         {
-            //if (crsView.Name != null)
             if (ModelState.IsValid)
             {
+            
                 adminRepository.updateBook(id, bookView);
 
                 return RedirectToAction("Books");
@@ -158,6 +187,42 @@ namespace Maktabty.Controllers
             List<ApplicationUser> users = adminRepository.getAllUsers();
 
             return View("Users", users);
+        }
+        private string uploadFile(addBookVM newBook)
+        {
+            string fileName = null;
+            if (newBook.book != null)
+            {
+                fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(newBook.book.FileName);
+
+                string mypath = @"C:/Users/طيبة/Desktop/Maktabty/Maktabty/wwwroot/Files/";
+                string uploadDir = Path.Combine(mypath);
+
+                string filePath = Path.Combine(uploadDir, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    newBook.book.CopyTo(fileStream);
+                }
+            }
+            return fileName;
+        }
+        private string uploadImageFile(addBookVM newBook)
+        {
+            string fileName = null;
+            if (newBook.Image != null)
+            {
+                fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(newBook.Image.FileName);
+
+                string mypath = @"C:/Users/طيبة/Desktop/Maktabty/Maktabty/wwwroot/Images/";
+                string uploadDir = Path.Combine(mypath);
+
+                string filePath = Path.Combine(uploadDir, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    newBook.Image.CopyTo(fileStream);
+                }
+            }
+            return fileName;
         }
 
     }

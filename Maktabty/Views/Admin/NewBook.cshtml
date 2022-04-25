@@ -4,9 +4,9 @@
     SelectList Cats = new SelectList(ViewBag.Cats,"Id","Name");
     SelectList Authors = new SelectList(ViewBag.Authors, "Id", "Name");
 }
-@model Book
+@model addBookVM
 <h1>New Book</h1>
-<form method="post" asp-action="SaveNewBook" asp-controller="Admin">
+<form method="post" asp-action="SaveNewBook" asp-controller="Admin" enctype="multipart/form-data">
     <div>
          <label for="Name">Name</label>
          <input asp-for="@Model.Name" class="form-control"/>
@@ -15,6 +15,10 @@
      <div>
         <label for="Image">Image</label>
         <input type="file" name="Image" accept="image/*" id="Image" value="@Model.Image"class="form-control"/>
+    </div>
+        <div>
+        <label for="book">book</label>
+        <input type="file" name="book" accept="book/*" id="book" value="@Model.book"class="form-control"/>
     </div>
      <div>
         <label for="Language">Language</label>
@@ -37,8 +41,8 @@
          <span asp-validation-for="@Model.PublishDate"></span>
     </div>
      <div>
-        <label for="Department">Category</label>
-        <select asp-for="Id" asp-items="Cats" class="form-control"></select>
+        <label for="Category">Category</label>
+        <select asp-for="CategoryId" asp-items="Cats" class="form-control"></select>
     </div>
     <br/>
     <input type="submit" value="Add" class="btn btn-success" />

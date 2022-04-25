@@ -19,8 +19,14 @@
                         <li><a class="getstarted scrollto" href="/Account/Register">Get Started</a></li>
                     }
                     else{
-                                 <li>
-                   <div class="dropdown">
+                        if (User.IsInRole("admin"))
+                        {
+                             <li><a class="getstarted scrollto" href="/Admin/Books">Dashboard</a></li> 
+                        }
+                        else
+                        {
+                            <li>
+                                <div class="dropdown">
                      <a class=" dropdown-toggle" type="button"
                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                    Profile
@@ -33,7 +39,7 @@
                 </ul>
                 </div>
             </li>
-                
+                }
                         
                         }
                     </ul>

@@ -125,14 +125,14 @@ namespace Maktabty.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "admin")]
         public IActionResult RegisterAdmin()
         {
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> RegisterAdmin(RegisterVM registerUser)
         {
             if (ModelState.IsValid == false)
@@ -157,7 +157,7 @@ namespace Maktabty.Controllers
                 if (result.Succeeded == true)
                 {
                     //regsiter user as Admin
-                    await userManager.AddToRoleAsync(userModel, "Admin");
+                    await userManager.AddToRoleAsync(userModel, "admin");
                     await signInManager.SignInAsync(userModel, false);
                     //authoniticat create cookie
                     return RedirectToAction("Index", "Book");

@@ -181,6 +181,12 @@ namespace Maktabty.Migrations
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("TotalRate")
+                        .HasColumnType("int");
+
+                    b.Property<string>("book")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -472,7 +478,7 @@ namespace Maktabty.Migrations
             modelBuilder.Entity("Maktabty.Models.Review", b =>
                 {
                     b.HasOne("Maktabty.Models.Book", "Book")
-                        .WithMany()
+                        .WithMany("reviews")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -537,6 +543,11 @@ namespace Maktabty.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Maktabty.Models.Book", b =>
+                {
+                    b.Navigation("reviews");
                 });
 #pragma warning restore 612, 618
         }

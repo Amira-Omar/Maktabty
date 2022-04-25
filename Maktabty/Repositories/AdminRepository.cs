@@ -1,7 +1,10 @@
 ﻿using Maktabty.Models;
 using Maktabty.Repositories;
+using Maktabty.viewModels;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Maktabty.Repositories
@@ -47,26 +50,28 @@ namespace Maktabty.Repositories
             return db.SaveChanges();
         }
 
-        public int updateBook(int id, Book book)
+        public int updateBook(int id, addBookVM bookView)
         {
-            Book oldBooks = db.Books.FirstOrDefault(b => b.Id == id);
-
-            if (oldBooks != null)
-            {
-                oldBooks.Id = book.Id;
-                oldBooks.Name = book.Name;
-                oldBooks.Image = book.Image;
-                oldBooks.IsFeatured = book.IsFeatured;
-                oldBooks.Language = book.Language;
-                oldBooks.Description = book.Description;
-                oldBooks.Pages = book.Pages;
-                oldBooks.NumOfDownloads = book.NumOfDownloads;
-                oldBooks.CategoryId = book.CategoryId;
-                oldBooks.Category = book.Category;
-                oldBooks.authors = book.authors;
+            var oldBooks = getBookById(id);
+            string stringImageName = uploadImageFile(bookView);
+            string stringFileName = uploadFile(bookView);
+           
+                oldBooks.Name = bookView.Name;
+                oldBooks.PublishDate = bookView.PublishDate;
+                oldBooks.Language = bookView.Language;
+                oldBooks.Description = bookView.Description;
+                oldBooks.Pages = bookView.Pages;
+                oldBooks.CategoryId = bookView.CategoryId;
+                if (bookView.Image != null)
+                {
+                    oldBooks.Image = stringImageName;
+                }
+                if (bookView.book != null)
+                {
+                    oldBooks.book = stringFileName;
+                }
                 return db.SaveChanges();
-            }
-            return 0;
+         
         }
         #endregion
         #region Author Operations
@@ -149,7 +154,43 @@ namespace Maktabty.Repositories
         }
         #endregion
 
-       
+        private string uploadFile(addBookVM newBook)
+        {
+            string fileName = null;
+            if (newBook.book != null)
+            {
+                fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(newBook.book.FileName);
+
+                string mypath = @"C:/Users/طيبة/Desktop/Maktabty/Maktabty/wwwroot/Files/";
+                string uploadDir = Path.Combine(mypath);
+
+                string filePath = Path.Combine(uploadDir, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    newBook.book.CopyTo(fileStream);
+                }
+            }
+            return fileName;
+        }
+        private string uploadImageFile(addBookVM newBook)
+        {
+            string fileName = null;
+            if (newBook.Image != null)
+            {
+                fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(newBook.Image.FileName);
+
+                string mypath = @"C:/Users/طيبة/Desktop/Maktabty/Maktabty/wwwroot/Images/";
+                string uploadDir = Path.Combine(mypath);
+
+                string filePath = Path.Combine(uploadDir, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    newBook.Image.CopyTo(fileStream);
+                }
+            }
+            return fileName;
+        }
+
 
     }
 }
