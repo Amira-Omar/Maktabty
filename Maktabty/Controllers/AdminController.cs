@@ -147,7 +147,11 @@ namespace Maktabty.Controllers
             return View(newCategory);
         }
 
-
+        public IActionResult DeleteCategory(int id)
+        {
+            adminRepository.RemoveCategory(id);
+            return RedirectToAction("Categories");
+        }
         public IActionResult Authors()
         {
             List<Author> authors = adminRepository.getAllAuthors();

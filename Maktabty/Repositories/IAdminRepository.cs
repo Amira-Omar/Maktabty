@@ -23,7 +23,8 @@ namespace Maktabty.Repositories
         Category getCategoryById(int id);
         int insertCategory(Category category);
         int updateCategory(int id, Category category);
-       
-        
+        int RemoveCategory(int id);
+
+
     }
 }

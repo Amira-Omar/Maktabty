@@ -152,6 +152,13 @@ namespace Maktabty.Repositories
             }
             return 0;
         }
+
+        public int RemoveCategory(int id)
+        {
+            Category category = db.Categories.FirstOrDefault(c => c.Id == id);
+            db.Categories.Remove(category);
+            return db.SaveChanges();
+        }
         #endregion
 
         private string uploadFile(addBookVM newBook)

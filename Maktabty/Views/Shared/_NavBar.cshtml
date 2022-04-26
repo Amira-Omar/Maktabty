@@ -2,9 +2,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container">
-      <div class="header-container d-flex align-items-center justify-content-between">
+      <div class="header-container d-flex align-items-center justify-content-between" style="    padding-right: 100px;">
         <div class="logo">
-          <h1 class="text-light"><a href="/Book/Index"><span>Bethany</span></a></h1>
+          <h1 class="text-light"><a href="/Book/Index"><span>BOOK WORM</span></a></h1>
         </div>
 
         <nav id="navbar" class="navbar">
@@ -12,11 +12,13 @@
       
             <li><a class="nav-link scrollto active" href="/Book/Index">Home</a></li>
            
-
-          @* <li><a class="nav-link scrollto" href="#about">About</a></li>*@
+            <li><a class="nav-link scrollto" href="/Book/About">About</a></li>
+            <li><a class="nav-link scrollto" href="/Book/Services">Services</a></li>
+                        <li><a class="nav-link scrollto" href="/Book/Team">Team</a></li>
+            <li><a class="nav-link scrollto " href="/Book/Contact">Contact</a></li>
                     @if (User.Identity.IsAuthenticated == false)
                     {
-                        <li><a class="getstarted scrollto" href="/Account/Register">Get Started</a></li>
+                        <li><a class="getstarted scrollto" href="/Account/Register">Sign Up</a></li>
                     }
                     else{
                         if (User.IsInRole("admin"))
@@ -27,7 +29,7 @@
                         {
                             <li>
                                 <div class="dropdown">
-                     <a class=" dropdown-toggle" type="button"
+                     <a class=" dropdown-toggle" href="#" type="button"
                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                    Profile
                   </a>

@@ -17,5 +17,6 @@ namespace Maktabty.Repositories
             List<Category> categories = db.Categories.ToList();
             return categories;
         }
+
     }
 }

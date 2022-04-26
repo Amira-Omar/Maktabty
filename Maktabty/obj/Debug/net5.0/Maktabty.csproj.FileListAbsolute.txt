@@ -820,3 +820,13 @@ C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Downloa
 C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\FavList\FavList.cshtml.g.cs
 C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Profile\UserData.cshtml.g.cs
 C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Reviews\Index.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Downloads\Download.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\FavList\AddToFav.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Profile\profile.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Shared\_EmptyLayout.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Downloads\_EmptyLayout.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\_EmptyLayout.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Book\About.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Book\Contact.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Book\Services.cshtml.g.cs
+C:\Users\طيبة\Desktop\Maktabty\Maktabty\obj\Debug\net5.0\Razor\Views\Book\Team.cshtml.g.cs

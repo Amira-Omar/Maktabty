@@ -3,7 +3,7 @@
     Layout = "_DashboardLayout.cshtml";
     SelectList Authors = new SelectList(ViewBag.Authors, "Id", "Name");
 }
-@model Book
+@model Author
 <h1>New Author</h1>
 <form method="post" asp-action="SaveNewAuthor" asp-controller="Admin">
     <div>
@@ -11,13 +11,11 @@
          <input asp-for="@Model.Name" class="form-control"/>
          <span asp-validation-for="@Model.Name"></span>
     </div>
-     <div>
-        <label for="Image">Image</label>
-        <input type="file" name="Image" accept="image/*" id="Image" value="@Model.Image"class="form-control"/>
-    </div>
     <br/>
-    <input type="submit" value="Add" class="btn btn-success" />
+    <input type="submit" value="Add" class="btn" style="background-color:#009970" />
 </form>
 <br/>
-<a href="/Admin/Authors" class="btn btn-success"> Back To List</a>
+<a href="/Admin/Authors" class="btn" style=" position: relative;
+    left: 90%;
+    top: -40px;background-color:#009970"> Back To List</a>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

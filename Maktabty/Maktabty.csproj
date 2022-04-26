@@ -22,4 +22,10 @@
     <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Downloads\Downloads.cshtml" />
+    <None Include="Views\FavList\FavList.cshtml" />
+    <None Include="Views\Profile\UserData.cshtml" />
+  </ItemGroup>
+
 </Project>
